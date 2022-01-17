@@ -14,6 +14,13 @@ class ViewController: UIViewController {
     }
     
     var collectionView: UICollectionView!
+    let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, SFSymbolItem> { (cell, indexPath, item) in
+        var content = cell.defaultContentConfiguration()
+        content.image = item.image
+        content.text = item.name
+        
+        cell.contentConfiguration = content
+    }
     let dataItems = [
         SFSymbolItem(name: "mic"),
         SFSymbolItem(name: "mic.fill"),
