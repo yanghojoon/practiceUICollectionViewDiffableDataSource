@@ -46,6 +46,19 @@ class ViewController: UIViewController {
         // Create List Layout
         let layoutConfig = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         let listLayout = UICollectionViewCompositionalLayout.list(using: layoutConfig)
+        
+        // Create CollectionView with List Layout
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: listLayout)
+        view.addSubview(collectionView)
+        
+        // Make collectionView's Layout
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor)
+        ])
     }
 
 
