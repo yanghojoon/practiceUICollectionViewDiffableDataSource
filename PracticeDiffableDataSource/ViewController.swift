@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         cell.contentConfiguration = content
     }
     var dataSource: UICollectionViewDiffableDataSource<Section, SFSymbolItem>!
+    var snapshot: NSDiffableDataSourceSnapshot<Section, SFSymbolItem>!
     let dataItems = [
         SFSymbolItem(name: "mic"),
         SFSymbolItem(name: "mic.fill"),
@@ -68,6 +69,7 @@ class ViewController: UIViewController {
             collectionView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor)
         ])
         setupCell()
+        setupSnapshot()
     }
 
     func setupCell() {
@@ -79,6 +81,14 @@ class ViewController: UIViewController {
             
             return cell
         }
+    }
+    
+    func setupSnapshot() {
+        snapshot = NSDiffableDataSourceSnapshot<Section, SFSymbolItem>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(dataItems, toSection: .main)
+        
+        dataSource.apply(snapshot, animatingDifferences: false)
     }
 }
 
