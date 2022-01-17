@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         
         cell.contentConfiguration = content
     }
+    var dataSource: UICollectionViewDiffableDataSource<Section, SFSymbolItem>!
     let dataItems = [
         SFSymbolItem(name: "mic"),
         SFSymbolItem(name: "mic.fill"),
@@ -66,8 +67,18 @@ class ViewController: UIViewController {
             collectionView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor)
         ])
+        setupCell()
     }
 
-
+    func setupCell() {
+        dataSource = UICollectionViewDiffableDataSource<Section, SFSymbolItem>(collectionView: collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: SFSymbolItem) -> UICollectionViewCell? in
+            let cell = collectionView.dequeueConfiguredReusableCell(using: self.cellRegistration,
+                                                                    for: indexPath,
+                                                                    item: itemIdentifier)
+            cell.accessories = [.disclosureIndicator()]
+            
+            return cell
+        }
+    }
 }
 
