@@ -13,6 +13,7 @@
 		DE03A4DC27954676002096FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE03A4DA27954676002096FF /* Main.storyboard */; };
 		DE03A4DE27954677002096FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE03A4DD27954677002096FF /* Assets.xcassets */; };
 		DE03A4E127954677002096FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE03A4DF27954677002096FF /* LaunchScreen.storyboard */; };
+		DE03A4E927954727002096FF /* SFSymboItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE03A4E827954727002096FF /* SFSymboItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DE03A4DD27954677002096FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE03A4E027954677002096FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE03A4E227954677002096FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE03A4E827954727002096FF /* SFSymboItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymboItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				DE03A4D427954676002096FF /* AppDelegate.swift */,
 				DE03A4D627954676002096FF /* SceneDelegate.swift */,
 				DE03A4D827954676002096FF /* ViewController.swift */,
+				DE03A4E827954727002096FF /* SFSymboItem.swift */,
 				DE03A4DA27954676002096FF /* Main.storyboard */,
 				DE03A4DD27954677002096FF /* Assets.xcassets */,
 				DE03A4DF27954677002096FF /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				DE03A4D927954676002096FF /* ViewController.swift in Sources */,
 				DE03A4D527954676002096FF /* AppDelegate.swift in Sources */,
+				DE03A4E927954727002096FF /* SFSymboItem.swift in Sources */,
 				DE03A4D727954676002096FF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
